@@ -1,4 +1,4 @@
-jSlider
+Cats Slider
 =======
 
-jSlider
+Cats Slider
