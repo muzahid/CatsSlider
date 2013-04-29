@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Cats Slider</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="documentationAssets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="documentationAssets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="documentationAssets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Cats Slider&rdquo; Documentation by &ldquo;Ashraful Imam&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Cats Slider&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					
+					<strong>
+					Created: 23 March 13<br>
+					By: Ashraful Imam<br>
+					Email: <a href="mailto:ashraf6892@gmail.com">ashraf6892@gmail.com</a>
+					</strong>
+				</p>
+				
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">If you have any questions that are beyond the scope of this help file, please feel free to email us . Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">Quick start guide</a></li>
+			<li><a href="#cssFiles">Details description</a></li>
+			<li><a href="#layer">Layer animation</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) Quick start guide :</strong></h3>
+			<h4><strong>Javascript Code:</strong></h4>
+			<p>
+				Cats Slider uses the jQuery framework. Load jQuery and the Cats Slider javascript files in the proper order.
+<pre><code>&lt;script src=&quot;js/jquery-1.7.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/CatsSlider.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+			
+		and ,
+	<pre><code>function(){
+	$('#slider').CatsSlider({
+	width:800,
+	height:480,
+	delay:3000,
+	animationDelay:1000,
+	navigate:{enable:true,enableColor:"darkred",disableColor:"black",borderColor:'#aaaaaa'},
+	next:"#next",
+	prev:"#prev",
+	autoSlide:true,
+});	
+      </code>
+      </pre>
+ 	<h4><strong>HTML Code :</strong></h4>		
+ 	<pre><code style="font-size: 12px">&lt;div id="slider"&gt;
+	&lt;button id='prev'&gt;prev&lt;/button&gt;
+	&lt;button id='next'&gt;next&lt;/button&gt;	 		
+	&lt;img src="images/image1.jpg" /&gt;
+	&lt;img src="images/image2.jpeg" /&gt;
+	&lt;img src="images/image3.jpg" /&gt;
+	&lt;img src="images/image4.jpg" /&gt;
+	&lt;img src="images/image5.jpg" /&gt;
+&lt;/div&gt;</code></pre> 
+ 
+ <h4><strong>CSS Code :</strong></h4>
+ 	<pre><code style="font-size: 12px">#slider
+{
+	width: 800px;
+	height: 480px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 30px;
+}		
+#next , #prev
+{
+    border: none;
+    height: 44px;
+	width: 44px;				
+}
+#next
+{
+	background: url(images/arrow-right.png);				
+}
+#prev
+{
+	background: url(images/arrow-left.png);
+}</code></pre>	
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) Details description:</strong> </h3>
+
+			<p>
+				<style type="text/css">
+					td{
+						border: thin gray solid;
+						text-align: center;
+					}
+				</style>
+				<table width="100%" cellpadding="2">
+					<tr>
+						<td width="35%" colspan="2">Parameter Name</td>
+						<td width="25%">Value</td>
+						<td width="40%">Description</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">width</td>
+						<td width="25%">integer</td>
+						<td width="45%">To indicate slider width</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">height</td>
+						<td width="25%">integer</td>
+						<td width="40%">To indicate slider height</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">delay</td>
+						<td width="25%"> integer ( mili second )</td>
+						<td width="40%">To indicate delay for every slide</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">animationDelay</td>
+						<td width="25%">integer ( mili second )</td>
+						<td width="40%">Every Animation time</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">next</td>
+						<td width="25%">css selector</td>
+						<td width="40%">next button id or class or any css selector</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">prev</td>
+						<td width="25%">css selector</td>
+						<td width="40%">next button id or class or any css selector</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">current</td>
+						<td width="25%">positive number</td>
+						<td width="40%">to point the starting point of image to slide . first image number is 1 </td>
+					</tr>	
+					<tr>
+						<td width="35%" colspan="2">onChange</td>
+						<td width="25%">function</td>
+						<td width="40%">WOW slider genarate a event for every slide with index number as current</td>
+					</tr>	
+					<tr>
+						<td width="35%" colspan="2">onhover</td>
+						<td width="25%">"pause" or "play"</td>
+						<td width="40%">on hover slide will pause for "pause" </td>
+					</tr>	
+					<tr>
+						<td width="35%" colspan="2">autoSlide</td>
+						<td width="25%">true or false</td>
+						<td width="40%">for true image will slide after every delay time </td>
+					</tr>
+					<tr>
+						<td width="15%" rowspan="4">navigate</td>
+						<td width="20%">enable</td>
+						<td width="25%">true or false</td>
+						<td width="40%">true for visulize bottom navigator </td>
+					</tr>
+					<tr>
+						<td width="20%">enableColor</td>
+						<td width="25%">color</td>
+						<td width="40%">current bottom bar color</td>
+					</tr>	
+					<tr>
+						<td width="20%">disableColor</td>
+						<td width="25%">color</td>
+						<td width="40%">all bottom bar color without current </td>
+					</tr>
+					<tr>
+						<td width="20%">borderColor</td>
+						<td width="25%">color</td>
+						<td width="40%">bar separator color </td>
+					</tr>																																							
+					<tr>
+						<td width="15%" rowspan="2">loader</td>
+						<td width="20%">enable</td>
+						<td width="25%">true or false</td>
+						<td width="40%">to enable top loader</td>
+					</tr>
+					<tr>
+						<td width="20%">color</td>
+						<td width="25%">color</td>
+						<td width="40%">top loader color</td>
+					</tr>
+					<tr>
+						<td width="35%" colspan="2">animationStyle</td>
+						<td width="25%">'circle','rectangular','row','column','vclose','hclose'</td>
+						<td width="40%">you can choose your fevarite animation from them</td>
+					</tr>														
+				</table>
+				
+			</p>
+		<hr>
+
+		<h3 id="layer"><strong>C) Layer Animation :</strong> </h3>
+		write a html code like-
+	&lt;img src="images/image5.jpg" /&gt;			
+		<pre><code>&lt;img src="images/image1.jpg" data-text-id="wow_text1" /&gt;
+
+and ,
+
+&lt;div id="wow_text1"&gt;
+	&lt;div style="font-size:42px;color:black;width:400px;" animation-style="{left:900px;top:150px;delay:0px;opacity:.1;},{left:300px;top:150px;opacity:1;delay:600;}"&gt;
+		6 Different Animation
+	&lt;/div&gt;		
+&lt;/div&gt;</code></pre>
+here animation-style attribute will do every animation on your slide -	{left:900px;top:150px;opacity:.1;delay:0;},{left:300px;top:150px;opacity:1;delay:600;} .	any single animation collapse with {} and multi animation separated by ',' . All is css style without delay . delay indicate the duration to change layer style from current to given style . you can see demo file for better understanding .
+	<br /><br />
+		<hr>
+		
+
+		
+		<p> As I said at the beginning, I'd be glad to help you if you have any questions relating to this plug-in. No guarantees, but I'll do my best to assist.</p> 
+		
+		<p class="append-bottom alt large"><strong>Nerdcats Team</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

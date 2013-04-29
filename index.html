@@ -1,0 +1,256 @@
+<html>
+	<head>
+		<title>Cats Slider</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- circle slider -->
+		<script type="text/javascript" src="js/jQuery_v1.8.2.js"></script>
+		<script type="text/javascript" src="js/CatsSlider.js"></script>
+		
+		
+		<!-- side note -->
+		<script type="text/javascript" src="jQuerySideNote/jQuerySideNote.js"></script>
+		<script type="text/javascript" src="jQuerySideNote/jquery.mousewheel.min.js"></script>
+		<link rel="stylesheet" href="jQuerySideNote/style.css" />
+		
+		<script type="text/javascript">
+		
+			if(window.innerWidth<=480)
+			{
+				window.location.href="mobile.html";
+			}
+		
+		
+			$(document).ready(
+				//circle slide
+				function(){
+					$('#slider').CatsSlider({
+						width:800,
+						height:480,
+						delay:3000,
+						animationDelay:1000,
+						navigate:{enable:true,enableColor:"darkred",disableColor:"black",borderColor:'#aaaaaa'},
+						next:"#next",
+						prev:"#prev",
+						autoSlide:true,
+						});			
+				
+				// help note
+				var profile=new jQuerySideNote(
+					{
+						target:".profile",
+						title:".profileTitle", 
+						titleWidth:40,
+						titleHeight:200,
+						titleAlign:"center", 
+						titleRotate:90,
+						width:400,
+						height:360,
+						align:"right",
+						valign:"top",
+						topMargin:50,
+						leftMargin:0,
+						attachIn:"window",
+						position:"fixed",
+						attachStyle:"inner",
+						theme:"red",
+						expand:false,
+						autoSlide:false
+					}
+				);				
+				
+			});
+			
+			
+		</script>
+		<style type="text/css">
+			#slider
+			{
+				width: 800px;
+				height: 480px;
+				margin: 0 auto;
+				overflow: hidden;
+				margin-top: 30px;
+			}		
+			#next , #prev
+			{
+			  border: none;
+			  height: 44px;
+			  width: 44px;				
+			}
+			#next
+			{
+				background: url(images/arrow-right.png);				
+			}
+			#prev
+			{
+				background: url(images/arrow-left.png);
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!-- title -->
+		<div id="head">
+		<h1 id="title">Cats Slider</h1>
+		</div>
+		
+		
+		
+		
+		
+		<!-- slider -->
+		<div id="slider">
+			<button id='prev'>prev</button>
+			<button id='next'>next</button>					
+			<img src="images/image1.jpg" data-text-id="wow_text1" />
+			<img src="images/image2.jpeg" data-text-id="wow_text2" />
+			<img src="images/image3.jpg" data-text-id="wow_text3" />
+			<img src="images/image4.jpg" data-text-id="wow_text4" />
+			<img src="images/image5.jpg" data-text-id="wow_text5" />
+		</div>	
+		
+		<div id="wow_text1">
+			<div style="font-size:42px;color:black;width:500px;" animation-style="{left:900px;top:150px;delay:0px;opacity:.1;},{left:300px;top:150px;delay:600;opacity:1;}">
+				6 Different Animation
+			</div>		
+		</div>
+		<div id="wow_text2">
+			<div style="font-size:32px;" animation-style="{left:0;top:100;delay:0;opacity:-1;},{left:60;top:100;delay:500;opacity:1;}">
+				Unlimited Number of Layers </br> Easy to animate
+			</div>	
+			<div style="font-size:16px;padding:2px;border-radius:5px;color:white;background-color:black;" animation-style="{left:-100px;top:300px;opacity:.1;},{left:180px;top:300px;delay:0;opacity:1;delay:400;}">
+				penguin
+			</div>	
+			<div style="font-size:16px;padding:2px;border-radius:5px;color:white;background-color:black;" animation-style="{left:900px;top:320px;opacity:1;},{left:680px;top:320px;opacity:1;delay:800;}">
+				penguin
+			</div>	
+			<div style="font-size:16px;padding:2px;border-radius:5px;color:white;background-color:black;" animation-style="{left:900px;top:100px;opacity:1;},{left:660px;top:100px;opacity:1;delay:1200;}">
+				penguin
+			</div>		
+			<div style="font-size:16px;padding:2px;border-radius:5px;color:white;background-color:black;" animation-style="{left:900px;top:50px;opacity:1;},{left:490px;top:50px;opacity:1;delay:1600;}">
+				penguin
+			</div>													
+		</div>
+		<div id="wow_text3">
+			<div style="font-size:32px;" animation-style="{left:150px;top:150px;opacity:.1;delay:0;},{left:50px;top:150px;opacity:1;delay:500}">
+				Responsive Slider
+			</div>				
+			<div style="font-size:32px;" animation-style="{left:-400px;top:100px;delay:0;},{left:50px;top:200px;delay:500}">
+				<img src="images/tablet.png" style="margin-left:-30px;width:300px;height:200px;" />
+			</div>				
+			<div style="font-size:32px;" animation-style="{left:-100px;top:600px;delay:0;},{left:270px;top:250px;delay:500}">
+				<img src="images/mobile.png" style="margin-left:-30px;width:128px;height:128px;" />
+			</div>						
+		</div>				
+		<div id="wow_text4">
+			<div style="font-size:24px;color:white;width:400px;" animation-style="{left:900px;top:445px;delay:0;},{left:550;top:445;delay:500}">
+				Bottom Navigation
+			</div>			
+		</div>
+		<div id="wow_text5">
+			<div style="font-size:16px;text-align:center;" animation-style="{left:350;top:235;delay:0;},{left:-100;top:235;delay:3000}">
+				<div>Image Layer</div>
+				<img src="images/boat.png" style="width:50px;height:50px;">
+			</div>	
+			<div style="font-size:16px;text-align:center;" animation-style="{left:-100;top:300;delay:0;},{left:350;top:300;delay:4000}">
+				<div>Image Layer</div>
+				<img src="images/boat.png" style="width:50px;height:50px;">
+			</div>						
+		</div>				
+		
+		<!-- end slider -->
+		
+		
+		<!-- Feature -->
+		
+		<div id="feature">
+			<div class="item">
+				<h2>Responsive Layout</h2>
+				<p>Cats slider has touch support . has support for mobile device , tablet and pc .</p>
+			</div>
+			<div class="item">
+				<h2>Keyboard Support</h2>
+				<p>Has keyboard navigation support . The user can navigate images by using the arrow keys .</p>
+			</div>
+			<div class="item">
+				<h2>All major browser support</h2>
+				<p>Cats slider support all major browser . even IE-7 and IE-8 .</p>
+			</div>
+			<div class="item">
+				<h2>Easy to animate</h2>
+				<p>You can easily customise animation of layer by html attribute . No need to write any javascript code .</p>
+			</div>	
+			<div class="item">
+				<h2>6 different animation</h2>
+				<p>have 6 diffent animation . choose your fovarites from those .</p>
+			</div>	
+			<div class="item">
+				<h2>Highly customizable</h2>
+				<p>You can everything like loader color , navigator color , delay ect .</p>
+			</div>
+			<div class="item">
+				<h2>Plug-in API</h2>
+				<p>Just need to add small code to full fill your all expectation . </p>
+			</div>	
+			<div class="item">
+				<h2>Free Support</h2>
+				<p>We provide free ongoing technical support to our customers through our email . Feel free to contact us </p>
+			</div>	
+			<div class="item">
+				<h2>Frequent Updates</h2>
+				<p>You will always remain current with our frequent updates , feature enhancements and bug fixes.</p>
+			</div>																									
+		</div>
+		
+		<!--foot-->
+		<div id="footer">
+			<div id="foot">
+				<div class="item">
+					<h2>About Us</h2>
+					<p>We're a highly skilled team of web , window 8 , windows phone 7 & 8 , android , i-phone . Please don't hesitate to contact us for any project .</p>
+				</div>
+				<div class="item">
+					<h2>Contact Us</h2>
+					<p>We like receiving emails from our visitors. Please don't hesitate to contact us for any of your questions. You can send your any email to ashraf6892@gmail.com.</p>
+				</div>	
+				<div class="item">
+					<img src="images/nerdcats.png" style="width: 150px; height: 150px;margin-left: 50px;margin-right:50px;" />
+				</div>				
+			</div>
+		</div>
+		
+		<!--help-->
+<div style="display: none;" class="noteContent">
+		<div class="profileTitle" style="line-height: 40px;text-align: center;">
+			How it's work
+		</div>
+	<div class="profile" title="info" >
+		<h1 style="border-bottom: 1px solid gray;font-size:16px;">Javascript Code :</h1>
+<pre><code style="font-size: 12px">
+&lt;script src=&quot;js/jquery-latest.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/CatsSlider.js&quot;&gt;&lt;/script&gt;
+</code></pre>		
+ 	<pre><code style="font-size: 12px">$('#slider').CatsSlider({
+	width:800,
+	height:480,
+	delay:1000,
+	animationDalay:500,
+	next:"#next",
+	prev:"#prev"
+});</code>
+      </pre> 
+		<h1 style="border-bottom: 1px solid gray;font-size:16px;">HTML Code :</h1> 
+</code></pre>		
+ 	<pre><code style="font-size: 12px">&lt;div id="slider"&gt;
+	&lt;img src="images/image1.jpg" /&gt;
+	&lt;img src="images/image2.jpeg" /&gt;
+	&lt;img src="images/image3.jpg" /&gt;
+	&lt;img src="images/image4.jpg" /&gt;
+	&lt;img src="images/image5.jpg" /&gt;
+&lt;/div&gt;</code>
+      </pre> 		          
+	</div>
+</div>
+
+	</body>
+</html>

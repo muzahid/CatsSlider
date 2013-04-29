@@ -1,0 +1,77 @@
+body , p , div , h1 , h2 , h3 , h4 , h5 , h6
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	background-color:white; /*#222222;*/
+	background-image:url("images/bg.gif");	
+	color:black;
+}
+#title
+{
+	text-align: center;
+	background-color:#DD0022;
+	border-radius: 0px 0px 15px 0px; 
+	color:white;
+	display:block;
+	width: 200px;
+	font-size: 32px;
+
+}
+#head
+{
+	border-top: 3px solid #DD0022;
+	width:100%;
+	height:1px;
+	margin-bottom: 50px;
+}
+#footer
+{
+	background-color:black;
+	box-shadow: 0px 0px 3px 3px black;
+}
+#feature , #foot
+{
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 40px;
+	font-size: 0px;
+}
+#feature .item , #foot .item
+{
+	display: inline-block;
+	width: 250px;
+	font-size: 16px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	vertical-align: top;	
+	margin-top: 10px;	
+}
+#feature .item:nth-child(3n-2) , #foot .item:nth-child(3n-2)
+{
+	margin-left: 0px;
+
+}
+#feature .item p{
+	text-align: justify;
+	color:gray;
+}
+#foot .item p{
+	text-align: justify;
+	color:white;
+}
+#feature .item h2{
+	border-bottom: 3px solid black;
+	text-align: center;
+	text-shadow: 1px 1px gray;
+	font-size: 18px;
+}
+#foot .item h2{
+	border-bottom: 3px solid red;
+	text-align: center;
+	text-shadow: 1px 1px gray;
+	font-size: 18px;
+	color:white;
+}
